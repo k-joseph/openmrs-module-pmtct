@@ -49,7 +49,8 @@
 <br/><br/><br/>
 
 <script type="text/javascript">
-
+	var $j = jQuery.noConflict();
+	
 	$j("#selectChart").change(function(){
 		var selectedId = $j("#selectChart option:selected").attr('id');
 		$j("#type").val(selectedId.substring(1));

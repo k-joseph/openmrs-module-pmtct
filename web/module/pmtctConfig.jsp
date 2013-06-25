@@ -149,6 +149,8 @@
 </form>
 
 <script type="text/javascript">
+	var $j = jQuery.noConflict();
+	
 	$j(document).ready( function() {
 		$j("#save").click(function(){
 			if (confirm("<spring:message code='@MODULE_ID@.general.message.confirm.save'/>")) {

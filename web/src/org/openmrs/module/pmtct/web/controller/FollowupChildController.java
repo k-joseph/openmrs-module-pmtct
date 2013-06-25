@@ -18,8 +18,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.openmrs.Concept;
@@ -36,7 +38,6 @@ import org.openmrs.User;
 import org.openmrs.api.ConceptService;
 import org.openmrs.api.EncounterService;
 import org.openmrs.api.context.Context;
-import org.openmrs.module.pmtct.PMTCTConfiguration;
 import org.openmrs.module.pmtct.PmtctChildInformation;
 import org.openmrs.module.pmtct.util.PMTCTConfigurationUtils;
 import org.openmrs.module.pmtct.util.PMTCTConstants;

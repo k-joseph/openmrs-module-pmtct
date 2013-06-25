@@ -126,6 +126,9 @@
 </div> -->
 
 <script type="text/javascript">
+
+	var $j = jQuery.noConflict();
+	
 	$j(document).ready( function() {
 		$j("#viewChart").click(function(){
 		    $j("#list_container").hide();

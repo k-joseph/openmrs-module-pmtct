@@ -1,5 +1,4 @@
 <%@ include file="template/localIncludes.jsp"%>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!-- ************************************************************* -->
 
 <openmrs:require privilege="Add Maternity information" otherwise="/login.htm" redirect="/module/@MODULE_ID@/addMaternityForm.form" />
@@ -272,8 +271,9 @@
 	//function getChildDOB(){
 		//$j("#birthdateSpan").text($j("#dateOfConfinementId").val());
 	//}
-		
-		$j(document).ready(function(){
+			var $j = jQuery.noConflict();
+			
+			$j(document).ready(function(){
 			$j(".next2Tab2").click(function(){
 				$j("#motherInfosTab").click();
 			});

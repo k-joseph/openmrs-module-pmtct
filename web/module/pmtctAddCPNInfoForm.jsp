@@ -1,5 +1,4 @@
 <%@ include file="template/localIncludes.jsp"%>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!-- *************************************** -->
 
@@ -459,7 +458,8 @@ $j(document).ready(function(){
 </script>
 
 <script type="text/javascript">
-
+	var $j = jQuery.noConflict();
+	
 	function changeTab(tabObj) {
 		if (!document.getElementById || !document.createTextNode) {return;}
 		if (typeof tabObj == "string")

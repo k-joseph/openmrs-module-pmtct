@@ -184,7 +184,8 @@
 
 <br/><br/>
 <script type="text/javascript">
-
+	var $j = jQuery.noConflict();
+	
 	function changeTab(tabObj) {
 		if (!document.getElementById || !document.createTextNode) {return;}
 		if (typeof tabObj == "string")

@@ -265,7 +265,8 @@
 </form:form>
 
 <script type="text/javascript">
-
+	var $j = jQuery.noConflict();
+	
 	$j(document).ready( function() {
 		$j("#hivStatus").change(function(){
 		    if($j("#hivStatus").val()!=$j("#positiveId").val())

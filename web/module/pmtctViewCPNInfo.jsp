@@ -1,7 +1,6 @@
 <%@ include file="template/localIncludes.jsp"%>
-<!-- <openmrs:htmlInclude file="/moduleResources/@MODULE_ID@/scripts/print.js" />  -->
 
-<!-- *************************************** -->
+<!-- <openmrs:htmlInclude file="/moduleResources/@MODULE_ID@/scripts/print.js" />  -->
 
 
 <div id="contentPrintable">

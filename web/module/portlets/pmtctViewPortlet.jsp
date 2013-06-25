@@ -1,5 +1,5 @@
-<%@ taglib prefix="pmtcttag" uri="/WEB-INF/view/module/pmtct/taglibs/pmtcttag.tld" %>
 <%@ include file="/WEB-INF/template/include.jsp"%>
+<%@ taglib prefix="pmtcttag" uri="/WEB-INF/view/module/pmtct/taglibs/pmtcttag.tld" %>
 <openmrs:htmlInclude file="/moduleResources/@MODULE_ID@/pmtctstyle.css" />
 
 <b class="boxHeader"><spring:message code="@MODULE_ID@.overviewBoxTitle" /></b>
