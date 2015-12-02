@@ -118,7 +118,7 @@ public class PmtctAddCPNInformationController extends SimpleFormController {
 			map.put("educationLevelAnswers", PMTCTUtil.createCodedOptions(PMTCTConstants.EDUCATION_LEVEL));
 			map.put("mainActivitiesAnswers", PMTCTUtil.createCodedOptions(PMTCTConstants.MAIN_ACTIVITY));
 			
-			//Result of HIV Test, HIV Test of a partner, Syphilis Test, HIV Status Disclosed, Partenaire attendu, Dépistage du partenaire séparement
+			//Result of HIV Test, HIV Test of a partner, Syphilis Test, HIV Status Disclosed, Partenaire attendu, DÃˆpistage du partenaire sÃˆparement
 			map.put("resultHIVTestAnswers", PMTCTUtil.createResultOfHivTestOptions());
 			map.put("resultHIVTestAnswersForPartner", PMTCTUtil.createResultOfHivTestOptions());
 			map.put("resultSyphilisTestAnswers", PMTCTUtil.createCodedOptions(PMTCTConstants.SYPHILIS_TEST));
