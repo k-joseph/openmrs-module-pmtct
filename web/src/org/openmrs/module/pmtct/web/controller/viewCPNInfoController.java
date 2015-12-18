@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.openmrs.DrugOrder;
+import org.openmrs.Order;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.pmtct.util.FileExporter;
 import org.openmrs.module.pmtct.util.PMTCTConfigurationUtils;
@@ -49,15 +50,13 @@ public class viewCPNInfoController extends ParameterizableViewController {
 			mav.addObject("encounter", Context.getEncounterService().getEncounter(
 			    Integer.parseInt(request.getParameter("encounterId"))));
 			mav.addObject("cpnNumberIdentifierID", PMTCTConfigurationUtils.getCPNIdentifierTypeId());
-			
-			List<DrugOrder> drugOrdersTmp = Context.getOrderService().getDrugOrdersByPatient(
-			    Context.getPatientService().getPatient(Integer.parseInt(request.getParameter("patientId"))));
 			List<DrugOrder> drugOrders = new ArrayList<DrugOrder>();
-			for (DrugOrder d : drugOrdersTmp) {
-				if (d.getConcept().getConceptId() == PMTCTConstants.PMTCT_DRUG_ORDER_CONCEPT_RELATED_ID)
-					drugOrders.add(d);
-			}
 			
+			List<Order> orderList = Context.getOrderService().getOrders(Context.getPatientService().getPatient(Integer.parseInt(request.getParameter("patientId"))), Context.getOrderService().getCareSettingByUuid("6f0c9a92-6f24-11e3-af88-005056821db0"), Context.getOrderService().getOrderTypeByName("Drug order"), false);//TODO, careseting should't be hard-coded to OUTPATIENT as here
+			for(Order order: orderList) {
+				if (order.getConcept().getConceptId() == PMTCTConstants.PMTCT_DRUG_ORDER_CONCEPT_RELATED_ID)
+					drugOrders.add((DrugOrder) order);
+			}
 			mav.addObject("drugOrders", drugOrders);
 			
 			FileExporter fexp = new FileExporter();

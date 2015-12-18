@@ -107,8 +107,7 @@ public class PmtctViewPortletController extends PortletController {
 				pmtctObjects.put("isInTheProgram", "-1");
 				
 				for (PatientProgram pprogram : pp) {
-					if (pprogram.getProgram().getProgramId().intValue() == PMTCTConfigurationUtils.getPmtctProgramId()
-					        .intValue()) {
+					if (pprogram.getPatientProgramId().intValue() == PMTCTConfigurationUtils.getPmtctProgramId().intValue()) {
 						//patient found in the PMTCT Program
 						pmtctPrograms.add(pprogram);
 					}

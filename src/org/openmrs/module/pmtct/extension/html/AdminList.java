@@ -48,9 +48,9 @@ public class AdminList extends AdministrationSectionExt {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		
-		if(Context.getAuthenticatedUser().hasPrivilege("Manage PMTCT configurations"))
+		/*if(Context.getAuthenticatedUser().hasPrivilege("Manage PMTCT configurations"))
 			map.put("module/pmtct/config.htm", "pmtct.config.title");
-		
+		*/
 		if(Context.getAuthenticatedUser().hasPrivilege("View patients in PMTCT"))
 			map.put("module/pmtct/patientInPmtct.list?page=1", "pmtct.homeGenTitle");
 		
